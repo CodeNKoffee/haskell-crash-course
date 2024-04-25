@@ -1,4 +1,6 @@
 -- This is the Haskell Crash Course
+-- YOUTUBE LINK: https://youtu.be/02_H3LjqMr8?si=PKMgOfPYOwRsGpfJ
+
 {-
 WE LOVE HASKELL
 This file contains a crash course on how to write programs in Haskell. It's meant for people who are completely new to functional programming and!!!!

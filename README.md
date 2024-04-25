@@ -38,3 +38,5 @@ The content in this repository is inspired by various Haskell resources, tutoria
 **Maintainer:**
 - Hatem Soliman
 - [Contact Me](https://hatemsoliman.dev)
+
+This crash course is available via the following link: [`Haskell Crash Course`](https://youtu.be/02_H3LjqMr8?si=PKMgOfPYOwRsGpfJ)
