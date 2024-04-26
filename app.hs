@@ -68,8 +68,21 @@ remove3 = filter (/= 3) morePrimeNumbers2
 is7InList = 7 `elem` morePrimeNumbers2
 maxPrime = maximum morePrimeNumbers2
 minPrime = minimum morePrimeNumbers
-
-
+newList = [1, 3, 5]
+productPrimes = product newList
+sumPrimes = sum newList
+zeroToTen = [1..10]
+evenList = [2, 4..20]
+skippedLetterList = ['A', 'C'..'Z']
+many2s = take 10 (repeat 2) -- We can create infinite lists in Haskell since it's a lazy language
+many3s = replicate 10 3
+cycleList = take 10 (cycle [1, 2, 3])
+listTimes2 = [x * 2 | x <- [1..10], x `mod` 5 == 0]
+divisibleBy9N13 = [x | x <- [1..500], x `mod` 9 == 0, x `mod` 13 == 0]
+sortedList = sort [9, 1, 8, 3, 4, 7, 6]
+sumOfLists = zipWith (+) [1, 2, 3, 4, 5] [6, 7, 8, 9] -- If lists are uneven in size, the numbers that do not have a pair are dropped
+listBiggerThan5 = filter (>5) morePrimeNumbers2
+evensUpTo20 = takeWhile (<=20) [2, 4..]
 
 main :: IO ()
 main = do
@@ -117,3 +130,20 @@ main = do
   putStrLn $ "Is 7 on the Prime Numbers 2 list: " ++ show is7InList
   putStrLn $ "Maximum number on the Prime Numbers 2 list: " ++ show maxPrime
   putStrLn $ "Minimum number on the Prime Numbers 2 list: " ++ show minPrime
+  -- Create Range
+  putStrLn $ "Sum of all numbers on the new list: " ++ show sumPrimes
+  putStrLn $ "Product of all numbers on the new list: " ++ show productPrimes
+  putStrLn $ "List from 0 to 10: " ++ show zeroToTen
+  putStrLn $ "Even numbers between 1 and 20: " ++ show evenList
+  putStrLn $ "Skipped letter list: " ++ show skippedLetterList
+  -- E.g. infList = [10, 20..]
+  putStrLn $ "2 is generated 10 times since we defined it to generate until 10: " ++ show many2s
+  putStrLn $ "3 is replicated 10 times: " ++ show many3s
+  putStrLn $ "Repeat items in a list indefinitely: " ++ show cycleList
+  putStrLn $ "Multiply every item in the list by 2: " ++ show listTimes2
+  putStrLn $ "Take only the values divisible by 9 and 13 in the list: " ++ show divisibleBy9N13
+  putStrLn $ "Sort a list: " ++ show sortedList
+  putStrLn $ "Sum of lists with ZIP: " ++ show sumOfLists
+  putStrLn $ "Filtered list of the prime numbers greater than 5: " ++ show morePrimeNumbers2
+  putStrLn $ "Even list created upto 20: " ++ show evensUpTo20
+
