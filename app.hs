@@ -47,6 +47,7 @@ trueOrFalse = True || False
 notTrue = not True
 
 -- LISTS
+primeNumbers :: [Int]
 primeNumbers = [3, 5, 7, 11]
 morePrimeNumbers = primeNumbers ++ [13, 17, 19, 23, 29]
 favNums = 2 : 7 : 21 : 66 : [] -- A way to combine numbers into a list
@@ -64,6 +65,9 @@ primeInit = init morePrimeNumbers2
 first3Primes = take 3 morePrimeNumbers2
 remove3Primes = drop 3 morePrimeNumbers2
 remove3 = filter (/= 3) morePrimeNumbers2
+is7InList = 7 `elem` morePrimeNumbers2
+maxPrime = maximum morePrimeNumbers2
+minPrime = minimum morePrimeNumbers
 
 
 
@@ -110,3 +114,6 @@ main = do
   putStrLn $ "First 3 Prime Numbers: " ++ show first3Primes
   putStrLn $ "More Prime Numbers without the first 3: " ++ show remove3Primes
   putStrLn $ "More Prime Numbers without the element 3: " ++ show remove3
+  putStrLn $ "Is 7 on the Prime Numbers 2 list: " ++ show is7InList
+  putStrLn $ "Maximum number on the Prime Numbers 2 list: " ++ show maxPrime
+  putStrLn $ "Minimum number on the Prime Numbers 2 list: " ++ show minPrime
